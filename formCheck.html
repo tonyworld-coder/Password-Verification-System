@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Check</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1 id="header">Form Verification</h1>
+
+    
+
+    <form action="" method="" id="form">
+        <h2 id="formHeader">Form</h2>
+        <div>
+            <input type="text" placeholder="Name" id="name">
+            <div id="errNameMsg"></div>
+        </div>
+
+        <div>
+            <input type="email" placeholder="Email" id="email">
+            <div id="errEmailMsg"></div>
+        </div>
+
+        <div>
+            <input type="password" placeholder="Password" id="pass">
+            <div id="errPassMsg" class="pppmsg"></div>
+        </div>
+
+        <div>
+            <input type="password" placeholder="Confirm Password" id="cPass">
+            <div id="errCPassMsg"></div>
+
+        </div>
+
+        <button type="submit" id="btn">
+            Submit
+        </button>
+    </form>
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

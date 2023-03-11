@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo,
+        #deo,
+        #dem,
+        #de {
+            font-size: 1.3rem;
+            color: greenyellow;
+            font-family: serif;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Header</h1>
+    <p id="deo"></p>
+    <p id="demo"></p>
+    <p id="dem"></p>
+    <p id="de"></p>
+
+
+    <script>
+        // There are three types of variables, there are:
+        // var: is a changeable variable
+        // let: is unchangeable variable
+        // const: is a constant variable
+
+        var a = 08140372637; // Data type is a number
+        var b = "Emma"; // Data type is a string
+        var c = true; // Data type is a boolean
+
+        // Three ways to display data
+        // console.log();
+        // document.write(b);
+        // alert(a);
+
+        // How to check data type
+        // typeof()
+
+
+        // var x = 3;
+        // var y = 5;
+        // var z = x % y;
+        // console.log(z);
+
+        // Array
+        // let arr = ['Emmy', 'Emma', 'Tony', 'another', 9];
+        // console.log(typeof(arr));
+
+        // Object
+        // let obj = {
+        //     firstname: 'emma', 
+        //     middlename: 'chibuike', 
+        //     surname: 'odoh', 
+        //     age: 18, 
+        //     address: 'No_9_address',
+        // };
+        // console.log(obj.surname);
+
+        // Array
+        // let arr1 = ['Emmy', 'Emma', 'Tony', 'Another'];
+        // document.getElementById('demo').innerHTML = arr1.sort();    
+        // document.getElementById('demo').innerHTML = arr1.reverse();  
+        // console.log(arr1.length);
+
+
+        // let num = 3;
+        // let num1 = 5;
+
+        // if(num == 5) {
+
+        //     console.log("Yes! 3");
+
+        // } else if(num1 == 6){
+
+        //     console.log("Yes! 5");
+        // } else {
+        //     console.log("NO!");
+        // }
+
+        // var phoneBrand = 'Samsung-A13';
+        // var phoneColor = 'Peach';
+        // var phoneCam = '50mp';
+
+        // if (phoneBrand == 'Samsung-A13' && phoneColor == 'Peach' && phoneCam == '50mp'){
+        //     console.log('It is available.');
+        // } else {
+        //     console.log('It is not available.');
+        // }
+
+        // let school = 'Ckc';
+        // let age = '19';
+        // let gender = 'F';
+
+        // if (school == "Basilica" && age >= 17 && gender == 'M'){
+
+        //     console.log('Awka exam centre.');
+
+        // } else if (school == 'Basilica' && age < 17 && gender == "M"){
+
+        //     console.log('Onitsha exam centre');
+
+        // } else if (school == 'Basilica' && age >= 17 && gender == 'F'){
+
+        //     console.log("Ogbaru exam centre");
+
+        // } else if (school == 'Basilica' && age < 17 && gender == 'F'){
+
+        //     console.log('Aguata exam centre');
+
+        // } else if (school == 'Ckc' && age >= 17 && gender == 'M'){
+
+        //     console.log("Utuocha exam centre");
+
+        // } else if (school == 'Ckc' && age < 17 && gender == 'M'){
+
+        //     console.log("Enugu exam centre");
+
+        // } else if (school == 'Qrc' && age >= 17 && gender == 'F'){
+
+        //     console.log("Ebonyi exam centre");
+        //     log
+
+        // } else if (school == 'Qrc' && age < 17 && gender == 'F'){
+
+        //     console.log("Abakaleki exam centre");
+
+        // } else {
+        //     console.log('No centre!');
+        // }
+
+        // For Loop
+        let show = "";
+
+        for (p = 0; p < 100; p++) {
+            show += p + '. ' + 'God is Great!' + "<br>";
+        }
+
+        document.getElementById('dem').innerHTML = show;
+
+
+        let psych = "";
+
+        for (let p = 0; p < 050; p++) {
+            psych += p + " ." + "POSH" + "<br>";
+
+        }
+        document.getElementById("de").innerHTML = psych
+
+
+        // While Loop
+        let show1 = "";
+        let i = 0;
+
+        while (i < 10) {
+            show1 += i + '. ' + 'Emmanual si na oka ndi abakaliki mma... ' + '<br>';
+            i++;
+        }
+
+        document.getElementById('demo').innerHTML = show1;
+
+
+        let tony = "";
+        let t = 0;
+
+        while (t < 101) {
+            tony += t + " ." + "frfefarefrgvrgvegveraevge" + "<br>";
+            t++
+        }
+
+        document.getElementById("deo").innerHTML = tony;
+
+
+
+
+
+    </script>
+</body>
+
+</html>

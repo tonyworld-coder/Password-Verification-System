@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #passForm {
+            background-color: rgb(136, 144, 151);
+            width: 40%;
+            margin: 20vh auto 0 auto;
+            padding: 3vh 1.5vw;
+        }
+        #header1 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #pass {
+            width: 100%;
+            height: 8vh;
+            border: none;
+            background-color: rgb(245, 228, 196);
+            
+        }
+        #cPass {
+            width: 100%;
+            height: 8vh;
+            border: none;
+            margin-top: 2vh;
+            background-color: rgb(245, 228, 196);
+        }
+        #sub {
+            width: 100%;
+            height: 7vh;
+            background-color: green;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-top: 2vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="" id="passForm">
+        <h1 id="header1">
+            Password Verification System
+        </h1>
+
+        <div class="">
+            <input type="password" placeholder="Password" id="pass">
+            <div id="passMsg"></div>
+        </div>
+        <div class="">
+            <input type="password" placeholder="Confirm Password" id="cPass">
+            <div id="cPassMsg"></div>
+        </div>
+
+        <button type="button" id="sub">Submit</button>
+    </form>
+    <button type="button" id="tap">show</button>
+    <button type="button" id="tap1">hide</button>
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script>
+        $('#tap').on('click', () => {
+            $('#pass').attr('type', 'text');
+        });
+
+        $('#tap1').on('click', () => {
+            $('#pass').attr('type', 'password');
+        });
+
+        $('#sub').on('click', (e) => {
+            // e.preventDefault();
+
+            let pass = $('#pass').val();
+            let cPass = $('#cPass').val();
+
+            var regEx = /(?=.*[!#$%&?^*@~() "])(?=.*[A-Z])(?=.*[0-9])^.{6,8}$/;      
+
+            if (pass == '') {
+
+                $('#passMsg').html('Password field cannot be empty');
+                $('#passMsg').css('color', 'rgb(168, 16, 16)');
+
+            }  else if(pass.match(regEx)) {
+
+                $('#passMsg').html('');
+ 
+
+                if (cPass == '') {
+
+                    $('#cPassMsg').html('Confirm Your Password');
+                    $('#cPassMsg').css('color', 'rgb(168, 16, 16)');
+
+                } else if(pass == cPass){
+                    
+                    $('#passMsg').html('');
+                    $('#cPassMsg').html('');
+                    alert('Password Submited Successfully!');
+
+                    setTimeout(() => {
+                        location.reload();
+                    }, 5000);
+
+                } else {
+
+                    $('#cPassMsg').html('Incorrect Password!');
+                    $('#cPassMsg').css('color', 'rgb(168, 16, 16)');
+                }
+            } else {
+                $('#passMsg').html('Your password must be atleast 6 and must not be more than 8, with atleast one capital letter, one small letter, one number, and symbol.');
+                $('#passMsg').css('color', 'rgb(168, 16, 16)');
+            }
+
+        });
+        
+    </script>
+</body>
+</html>
